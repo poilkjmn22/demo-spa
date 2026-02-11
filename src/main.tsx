@@ -9,9 +9,10 @@ initCore({
   app: 'demo-spa',
   version: '1.0.0',
   env: 'dev',
-  reporter: 'http://0.0.0.0:3060/api/experience/report',
-  // console.log('Reported event:', event);
-  // },
+  // reporter: 'http://0.0.0.0:3060/api/experience/report',
+  reporter: (event) => {
+    console.log('Reported event:', event);
+  },
   sample: 1,
 });
 spaPreset({
